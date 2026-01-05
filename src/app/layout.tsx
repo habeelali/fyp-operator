@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SettingsProvider } from "@/contexts/SettingsContext";
 
 export const metadata: Metadata = {
   title: "UGV Operator Control",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <SettingsProvider>
+        <body className="antialiased">{children}</body>
+      </SettingsProvider>
     </html>
   );
 }

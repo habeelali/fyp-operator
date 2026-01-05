@@ -1,11 +1,23 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useCallback } from 'react';
-import { Battery, Zap, CheckCircle, XCircle, Power, Play, StopCircle, RefreshCw } from 'lucide-react';
+import { useState, useEffect, useCallback } from "react";
+import axios from "axios";
+import { useSettings } from "@/contexts/SettingsContext"; // Added import for useSettings
+import {
+  Battery,
+  Zap,
+  CheckCircle,
+  XCircle,
+  Power,
+  Play,
+  StopCircle,
+  RefreshCw,
+  LoaderCircle,
+} from "lucide-react";
 
 // Define the structure of the data received from the ESP32's /powerstats endpoint
 interface Esp32PowerStats {
-  state: 'OFF' | 'READY' | 'CRANKING' | 'RUNNING' | 'ERROR';
+  state: "OFF" | "READY" | "CRANKING" | "RUNNING" | "ERROR";
   ip: string;
   v24: number;
   v51: number;
@@ -32,10 +44,8 @@ interface PowerData {
   current5v1: number;
   current5v2: number;
   current3v3: number;
-  systemState: 'OFF' | 'READY' | 'CRANKING' | 'RUNNING' | 'ERROR';
+  systemState: "OFF" | "READY" | "CRANKING" | "RUNNING" | "ERROR";
 }
-
-const ESP32_IP = 'http://192.168.100.99'; // Base IP for the ESP32 web server
 
 // Initial dummy state while loading
 const initialData: PowerData = {
@@ -47,7 +57,7 @@ const initialData: PowerData = {
   current5v1: 0,
   current5v2: 0,
   current3v3: 0,
-  systemState: 'OFF',
+  systemState: "OFF",
 };
 
 // Initial Relay State based on API output
@@ -59,26 +69,33 @@ interface RelayState {
 }
 
 export default function PowerStats() {
+  const { settings } = useSettings(); // Added to get settings from context
   const [data, setData] = useState<PowerData>(initialData);
   const [relays, setRelays] = useState<RelayState[]>([
-    { id: 1, label: 'Relay 1 (D4)', key: 'R1_D4', enabled: false },
-    { id: 2, label: 'Relay 2 (D16)', key: 'R2_D16', enabled: false },
-    { id: 3, label: 'Relay 3 (D17)', key: 'R3_D17', enabled: false },
-    { id: 4, label: 'Relay 4 (D5)', key: 'R4_D5', enabled: false },
+    { id: 1, label: "Relay 1 (D4)", key: "R1_D4", enabled: false },
+    { id: 2, label: "Relay 2 (D16)", key: "R2_D16", enabled: false },
+    { id: 3, label: "Relay 3 (D17)", key: "R3_D17", enabled: false },
+    { id: 4, label: "Relay 4 (D5)", key: "R4_D5", enabled: false },
   ]);
   const [isLoading, setIsLoading] = useState(true);
-  // NEW STATE: Tracks when a relay change command is in flight
-  const [isRelayChanging, setIsRelayChanging] = useState(false); 
+  const [error, setError] = useState<string | null>(null);
+  const [isRelayChanging, setIsRelayChanging] = useState(false);
 
   /**
    * Fetches power stats from the ESP32 and updates the component state.
    */
   const fetchPowerStats = useCallback(async () => {
     try {
-      const response = await fetch(`${ESP32_IP}/powerstats`, { cache: 'no-store' });
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      
-      const esp32Data: Esp32PowerStats = await response.json();
+      // Updated to use dynamic API URL from settings
+      const response = await axios.get<Esp32PowerStats>(
+        `${settings.apiBaseUrl}/api/power-stats`,
+        {
+          timeout: 2500,
+          headers: { "Cache-Control": "no-cache" },
+        }
+      );
+
+      const esp32Data = response.data;
 
       // Map API data to component state
       setData({
@@ -94,124 +111,150 @@ export default function PowerStats() {
       });
 
       // Update Relay States based on API response
-      setRelays(prev => 
-        prev.map(relay => ({
+      setRelays((prev) =>
+        prev.map((relay) => ({
           ...relay,
           enabled: esp32Data[relay.key] as boolean,
         }))
       );
 
       setIsLoading(false);
-      // Ensure the relay changing state is false once the data is received.
-      setIsRelayChanging(false); 
-
-    } catch (error) {
-      console.error("Failed to fetch power stats:", error);
+      setError(null);
+      setIsRelayChanging(false);
+    } catch (err) {
+      console.error("Failed to fetch power stats:", err);
+      setError("Failed to connect to Power Monitor. Check UGV connection.");
       setIsLoading(false);
+      setIsRelayChanging(false);
     }
-  }, []);
+  }, [settings.apiBaseUrl]); // Added dependency on settings.apiBaseUrl
 
   // Polling useEffect hook
   useEffect(() => {
     fetchPowerStats(); // Initial fetch
-    // Only poll if a relay command isn't currently changing.
-    // The relay command itself will trigger a fetch on success.
     const intervalId = setInterval(() => {
-        if (!isRelayChanging) {
-            fetchPowerStats();
-        }
-    }, 2000); 
+      if (!isRelayChanging) {
+        fetchPowerStats();
+      }
+    }, 2000);
 
-    return () => clearInterval(intervalId); // Cleanup on unmount
-  }, [fetchPowerStats, isRelayChanging]);
+    return () => clearInterval(intervalId);
+  }, [fetchPowerStats, isRelayChanging]); // fetchPowerStats now depends on settings.apiBaseUrl
 
   /**
    * Sends a command to set all relay states.
    * @param updatedRelays The new state of all four relays.
    */
   const sendRelayCommand = async (updatedRelays: RelayState[]) => {
-    setIsRelayChanging(true); // START loading/disabling
-    const params = updatedRelays.map(r => `r${r.id}=${r.enabled ? 1 : 0}`).join('&');
+    setIsRelayChanging(true);
+    const params = updatedRelays
+      .map((r) => `r${r.id}=${r.enabled ? 1 : 0}`)
+      .join("&");
     const url = `${ESP32_IP}/setrelay?${params}`;
 
     try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('Failed to set relays.');
-      }
-      
+      await axios.get(url, { timeout: 2500 });
+
       // OPTIMISTIC UPDATE: Set the new state immediately for responsiveness
       setRelays(updatedRelays);
-      
+
       console.log(`Relay command successful: ${params}`);
 
       // SUCCESS: Trigger a fetch to confirm the state from the hardware
-      await fetchPowerStats(); 
-      
-    } catch (error) {
-      console.error("Error setting relays:", error);
-      
+      await fetchPowerStats();
+    } catch (err) {
+      console.error("Error setting relays:", err);
+      setError("Failed to set relay state. Check connection.");
+
       // FAILURE: Stop loading and rely on the next poll/manual refresh to correct the UI
-      setIsRelayChanging(false); 
-      
+      setIsRelayChanging(false);
     }
   };
-
 
   /**
    * Toggles a single relay and sends the command.
    */
   const toggleRelay = (id: number) => {
-    // 1. Calculate the new state for all relays
-    const updatedRelays = relays.map(relay => 
-      relay.id === id 
-        ? { ...relay, enabled: !relay.enabled }
-        : relay
+    const updatedRelays = relays.map((relay) =>
+      relay.id === id ? { ...relay, enabled: !relay.enabled } : relay
     );
-    
-    // 2. Send the command for the entire set
+
     sendRelayCommand(updatedRelays);
   };
-  
+
   /**
    * System Control Handlers
    */
   const handleStart = async () => {
     try {
-        const response = await fetch(`${ESP32_IP}/start`);
-        if (!response.ok) throw new Error('Start command failed');
-        console.log('System START command sent.');
-        await fetchPowerStats(); // Fetch new state immediately
-    } catch (error) {
-        console.error("Error sending START command:", error);
+      await axios.get(`${ESP32_IP}/start`, { timeout: 2500 });
+      console.log("System START command sent.");
+      setError(null);
+      await fetchPowerStats();
+    } catch (err) {
+      console.error("Error sending START command:", err);
+      setError("Failed to send START command.");
     }
   };
 
   const handleStop = async () => {
     try {
-        const response = await fetch(`${ESP32_IP}/stop`);
-        if (!response.ok) throw new Error('Stop command failed');
-        console.log('System STOP command sent.');
-        await fetchPowerStats(); // Fetch new state immediately
-    } catch (error) {
-        console.error("Error sending STOP command:", error);
+      await axios.get(`${ESP32_IP}/stop`, { timeout: 2500 });
+      console.log("System STOP command sent.");
+      setError(null);
+      await fetchPowerStats();
+    } catch (err) {
+      console.error("Error sending STOP command:", err);
+      setError("Failed to send STOP command.");
     }
   };
 
-  const StatItem = ({ label, value, unit }: { label: string; value: number; unit: string }) => (
+  const StatItem = ({
+    label,
+    value,
+    unit,
+  }: {
+    label: string;
+    value: number;
+    unit: string;
+  }) => (
     <div className="flex justify-between items-center py-2 border-b border-gray-800/50 last:border-b-0">
       <span className="text-sm text-gray-400">{label}</span>
-      <span className="text-base font-mono text-white">{value.toFixed(2)} {unit}</span>
+      <span className="text-base font-mono text-white">
+        {value.toFixed(2)} {unit}
+      </span>
     </div>
   );
-  
+
   // Display a loading state if data is being fetched for the first time
   if (isLoading) {
     return (
-        <div className="bg-[#0f0f0f] border border-gray-800 rounded-lg p-6 text-white text-center">
-            <RefreshCw size={24} className="mx-auto mb-2 animate-spin text-gray-400" />
-            Loading Power Stats from {ESP32_IP}...
+      <div className="bg-[#0f0f0f] border border-gray-800 rounded-lg p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
+          <Zap size={22} className="mr-2 text-yellow-500" />
+          Power Management Dashboard
+        </h2>
+        <div className="flex items-center justify-center h-48 text-gray-400">
+          <LoaderCircle size={24} className="animate-spin mr-2" />
+          Loading Power Stats from UGV...
         </div>
+      </div>
+    );
+  }
+
+  // Display error state with red border
+  if (error && isLoading) {
+    return (
+      <div className="bg-[#0f0f0f] border border-red-700 rounded-lg p-6">
+        <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
+          <Zap size={22} className="mr-2 text-red-500" />
+          Power Management Dashboard
+        </h2>
+        <div className="flex items-center justify-center h-48 text-red-500">
+          <XCircle size={24} className="mr-2" />
+          {error}
+        </div>
+      </div>
     );
   }
 
@@ -219,19 +262,33 @@ export default function PowerStats() {
   return (
     <div className="bg-[#0f0f0f] border border-gray-800 rounded-lg p-6">
       <div className="flex items-center justify-between mb-6">
-        <div className='flex items-center space-x-2'>
-            <Zap size={22} className="text-yellow-500" />
-            <h2 className="text-xl font-semibold text-white">Power Management Dashboard</h2>
+        <div className="flex items-center space-x-2">
+          <Zap size={22} className="text-yellow-500" />
+          <h2 className="text-xl font-semibold text-white">
+            Power Management Dashboard
+          </h2>
         </div>
-        <button 
-            onClick={fetchPowerStats}
-            disabled={isRelayChanging} // Disable during relay change
-            className={`p-2 rounded-full transition-colors ${isRelayChanging ? 'bg-gray-900 cursor-not-allowed' : 'bg-gray-800 hover:bg-gray-700'}`}
-            title="Manual Refresh"
+        <button
+          onClick={fetchPowerStats}
+          disabled={isRelayChanging}
+          className={`p-2 rounded-full transition-colors ${
+            isRelayChanging
+              ? "bg-gray-900 cursor-not-allowed"
+              : "bg-gray-800 hover: bg-gray-700"
+          }`}
+          title="Manual Refresh"
         >
-            <RefreshCw size={18} className='text-gray-400' />
+          <RefreshCw size={18} className="text-gray-400" />
         </button>
       </div>
+
+      {/* Show error banner if there's an error but data is still available */}
+      {error && !isLoading && (
+        <div className="mb-4 bg-red-900/20 border border-red-700 rounded-lg p-3 flex items-center text-red-400">
+          <XCircle size={18} className="mr-2" />
+          <span className="text-sm">{error}</span>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Voltage Rails */}
@@ -256,31 +313,53 @@ export default function PowerStats() {
           </h3>
           <div className="space-y-1">
             <StatItem label="Pack Current" value={data.packCurrent} unit="A" />
-            <StatItem label="5V1 Current" value={Math.abs(data.current5v1)} unit="A" />
-            <StatItem label="5V2 Current" value={Math.abs(data.current5v2)} unit="A" />
-            <StatItem label="3.3V Current" value={Math.abs(data.current3v3)} unit="A" />
+            <StatItem
+              label="5V1 Current"
+              value={Math.abs(data.current5v1)}
+              unit="A"
+            />
+            <StatItem
+              label="5V2 Current"
+              value={Math.abs(data.current5v2)}
+              unit="A"
+            />
+            <StatItem
+              label="3.3V Current"
+              value={Math.abs(data.current3v3)}
+              unit="A"
+            />
           </div>
         </div>
 
         {/* System Status & Control */}
         <div className="bg-[#0a0a0a] border border-gray-800 rounded-lg p-4">
-          <h3 className="text-sm font-medium text-gray-300 mb-3">System Status & Control</h3>
+          <h3 className="text-sm font-medium text-gray-300 mb-3">
+            System Status & Control
+          </h3>
           <div className="space-y-4">
             <div>
               <p className="text-sm text-gray-400 mb-2">System State</p>
               <div className="flex items-center space-x-2">
-                <div className={`
-                    w-3 h-3 rounded-full 
-                    ${data.systemState === 'RUNNING' ? 'bg-green-500 animate-pulse' : 
-                      data.systemState === 'READY' ? 'bg-yellow-500' :
-                      data.systemState === 'ERROR' ? 'bg-red-500' : 'bg-gray-500'}
-                `} />
+                <div
+                  className={`
+                  w-3 h-3 rounded-full 
+                  ${
+                    data.systemState === "RUNNING"
+                      ? "bg-green-500 animate-pulse"
+                      : data.systemState === "READY"
+                      ? "bg-yellow-500"
+                      : data.systemState === "ERROR"
+                      ? "bg-red-500"
+                      : "bg-gray-500"
+                  }
+                `}
+                />
                 <span className="text-white font-medium">
-                    {data.systemState}
+                  {data.systemState}
                 </span>
               </div>
             </div>
-            
+
             <div>
               <p className="text-sm text-gray-400 mb-2">Total Power</p>
               <p className="text-2xl font-bold text-white">
@@ -290,26 +369,33 @@ export default function PowerStats() {
 
             {/* System Control Buttons */}
             <div className="flex space-x-2 pt-2 border-t border-gray-800/50">
-                <button
-                    onClick={handleStart}
-                    disabled={data.systemState !== 'READY' || isRelayChanging} // Disable if relay is changing
-                    className={`flex-1 flex items-center justify-center p-2 rounded-lg text-sm font-medium 
-                        ${data.systemState === 'READY' && !isRelayChanging ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-700 opacity-50 cursor-not-allowed'}
-                        text-white transition-colors`}
-                >
-                    <Play size={16} className="mr-1" /> START
-                </button>
-                <button
-                    onClick={handleStop}
-                    disabled={data.systemState === 'OFF' || isRelayChanging} // Disable if relay is changing
-                    className={`flex-1 flex items-center justify-center p-2 rounded-lg text-sm font-medium 
-                        ${data.systemState !== 'OFF' && !isRelayChanging ? 'bg-red-600 hover:bg-red-700' : 'bg-gray-700 opacity-50 cursor-not-allowed'}
-                        text-white transition-colors`}
-                >
-                    <StopCircle size={16} className="mr-1" /> STOP
-                </button>
+              <button
+                onClick={handleStart}
+                disabled={data.systemState !== "READY" || isRelayChanging}
+                className={`flex-1 flex items-center justify-center p-2 rounded-lg text-sm font-medium 
+                  ${
+                    data.systemState === "READY" && !isRelayChanging
+                      ? "bg-green-600 hover:bg-green-700"
+                      : "bg-gray-700 opacity-50 cursor-not-allowed"
+                  }
+                  text-white transition-colors`}
+              >
+                <Play size={16} className="mr-1" /> START
+              </button>
+              <button
+                onClick={handleStop}
+                disabled={data.systemState === "OFF" || isRelayChanging}
+                className={`flex-1 flex items-center justify-center p-2 rounded-lg text-sm font-medium 
+                  ${
+                    data.systemState !== "OFF" && !isRelayChanging
+                      ? "bg-red-600 hover:bg-red-700"
+                      : "bg-gray-700 opacity-50 cursor-not-allowed"
+                  }
+                  text-white transition-colors`}
+              >
+                <StopCircle size={16} className="mr-1" /> STOP
+              </button>
             </div>
-
           </div>
         </div>
 
@@ -317,15 +403,18 @@ export default function PowerStats() {
         <div className="bg-[#0a0a0a] border border-gray-800 rounded-lg p-4">
           <h3 className="text-sm font-medium text-gray-300 mb-3 flex items-center">
             {isRelayChanging ? (
-                <>
-                    <RefreshCw size={16} className="mr-2 text-purple-500 animate-spin" />
-                    Updating...
-                </>
+              <>
+                <RefreshCw
+                  size={16}
+                  className="mr-2 text-purple-500 animate-spin"
+                />
+                Updating...
+              </>
             ) : (
-                <>
-                    <Power size={16} className="mr-2 text-purple-500" />
-                    Relay Controls
-                </>
+              <>
+                <Power size={16} className="mr-2 text-purple-500" />
+                Relay Controls
+              </>
             )}
           </h3>
           <div className="space-y-3">
@@ -333,32 +422,46 @@ export default function PowerStats() {
               <button
                 key={relay.id}
                 onClick={() => toggleRelay(relay.id)}
-                // Disable if not RUNNING OR if a relay command is in flight
-                disabled={data.systemState !== 'RUNNING' || isRelayChanging} 
+                disabled={data.systemState !== "RUNNING" || isRelayChanging}
                 className={`
                   w-full flex items-center justify-between px-3 py-2.5 rounded-lg
                   transition-all border
-                  ${relay.enabled 
-                    ? 'bg-green-900/30 border-green-600' 
-                    : 'bg-gray-900 border-gray-700'
+                  ${
+                    relay.enabled
+                      ? "bg-green-900/30 border-green-600"
+                      : "bg-gray-900 border-gray-700"
                   }
-                  ${data.systemState !== 'RUNNING' || isRelayChanging ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-800'}
+                  ${
+                    data.systemState !== "RUNNING" || isRelayChanging
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:bg-gray-800"
+                  }
                 `}
               >
-                <span className="text-sm font-medium text-white">{relay.label}</span>
+                <span className="text-sm font-medium text-white">
+                  {relay.label}
+                </span>
                 <div className="flex items-center space-x-2">
-                  {/* Show a spinner on the button if it is the one being changed (optional refinement) */}
                   {isRelayChanging ? (
-                    <RefreshCw size={14} className="animate-spin text-gray-400" />
+                    <RefreshCw
+                      size={14}
+                      className="animate-spin text-gray-400"
+                    />
                   ) : (
                     <>
-                      <span className={`text-xs font-medium ${relay.enabled ? 'text-green-400' : 'text-gray-500'}`}>
-                        {relay.enabled ? 'ON' : 'OFF'}
+                      <span
+                        className={`text-xs font-medium ${
+                          relay.enabled ? "text-green-400" : "text-gray-500"
+                        }`}
+                      >
+                        {relay.enabled ? "ON" : "OFF"}
                       </span>
-                      <div className={`
+                      <div
+                        className={`
                         w-2 h-2 rounded-full
-                        ${relay.enabled ? 'bg-green-500' : 'bg-gray-600'}
-                      `} />
+                        ${relay.enabled ? "bg-green-500" : "bg-gray-600"}
+                      `}
+                      />
                     </>
                   )}
                 </div>
