@@ -1,0 +1,540 @@
+2026-01-05 06:13:52,689 - main - INFO - Brain initialized successfully
+2026-01-05 06:13:52,815 - main - INFO - Starting application lifespan...
+2026-01-05 06:13:52,815 - main - INFO - Thread pool executor initialized
+2026-01-05 06:13:52,816 - main - INFO - Loading YOLO models...
+2026-01-05 06:13:54,691 - main - CRITICAL - Failed to load models: [Errno 2] No such file or directory: 'models\\fire_smoke.pt'
+2026-01-05 06:16:02,861 - main - INFO - Brain initialized successfully
+2026-01-05 06:16:02,938 - main - INFO - Starting application lifespan...
+2026-01-05 06:16:02,939 - main - INFO - Thread pool executor initialized
+2026-01-05 06:16:02,939 - main - INFO - Loading YOLO models...
+2026-01-05 06:16:03,390 - main - INFO - YOLO models loaded successfully
+2026-01-05 06:16:03,393 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_011603_20260105_011603
+2026-01-05 06:16:03,394 - main - INFO - Startup sequence completed
+2026-01-05 06:34:41,108 - main - INFO - Shutting down application...
+2026-01-05 06:34:41,108 - main - INFO - Mission complete: {'mission_id': '20260105_011603', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_011603_20260105_011603', 'log_file': 'mission_logs\\mission_20260105_011603_20260105_011603\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_011603_20260105_011603\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_011603_20260105_011603\\images'}
+2026-01-05 06:34:41,110 - main - INFO - Thread pool executor shut down
+2026-01-05 16:16:59,936 - main - INFO - Brain initialized successfully
+2026-01-05 16:17:00,049 - main - INFO - Starting application lifespan...
+2026-01-05 16:17:00,050 - main - INFO - Thread pool executor initialized
+2026-01-05 16:17:00,051 - main - INFO - Loading YOLO models...
+2026-01-05 16:17:00,640 - main - INFO - YOLO models loaded successfully
+2026-01-05 16:17:00,643 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_111700_20260105_111700
+2026-01-05 16:17:00,645 - main - INFO - Startup sequence completed
+2026-01-05 16:17:23,070 - main - INFO - Brain initialized successfully
+2026-01-05 16:17:23,140 - main - INFO - Starting application lifespan...
+2026-01-05 16:17:23,140 - main - INFO - Thread pool executor initialized
+2026-01-05 16:17:23,140 - main - INFO - Loading YOLO models...
+2026-01-05 16:17:23,591 - main - INFO - YOLO models loaded successfully
+2026-01-05 16:17:23,599 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_111723_20260105_111723
+2026-01-05 16:17:23,599 - main - INFO - Startup sequence completed
+2026-01-05 16:17:44,891 - main - INFO - Shutting down application...
+2026-01-05 16:17:44,892 - main - INFO - Mission complete: {'mission_id': '20260105_111723', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_111723_20260105_111723', 'log_file': 'mission_logs\\mission_20260105_111723_20260105_111723\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_111723_20260105_111723\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_111723_20260105_111723\\images'}
+2026-01-05 16:17:44,893 - main - INFO - Thread pool executor shut down
+2026-01-05 16:25:12,698 - main - INFO - Brain initialized successfully
+2026-01-05 16:25:12,754 - main - INFO - Starting application lifespan...
+2026-01-05 16:25:12,754 - main - INFO - Thread pool executor initialized
+2026-01-05 16:25:12,755 - main - INFO - Loading YOLO models...
+2026-01-05 16:25:13,107 - main - INFO - YOLO models loaded successfully
+2026-01-05 16:25:13,110 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_112513_20260105_112513
+2026-01-05 16:25:13,110 - main - INFO - Startup sequence completed
+2026-01-05 16:27:02,442 - main - INFO - Shutting down application...
+2026-01-05 16:27:02,443 - main - INFO - Mission complete: {'mission_id': '20260105_112513', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_112513_20260105_112513', 'log_file': 'mission_logs\\mission_20260105_112513_20260105_112513\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_112513_20260105_112513\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_112513_20260105_112513\\images'}
+2026-01-05 16:27:02,445 - main - INFO - Thread pool executor shut down
+2026-01-05 16:29:29,261 - main - INFO - Brain initialized successfully
+2026-01-05 16:29:29,320 - main - INFO - Starting application lifespan...
+2026-01-05 16:29:29,321 - main - INFO - Thread pool executor initialized
+2026-01-05 16:29:29,321 - main - INFO - Loading YOLO models...
+2026-01-05 16:29:29,667 - main - INFO - YOLO models loaded successfully
+2026-01-05 16:29:29,670 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_112929_20260105_112929
+2026-01-05 16:29:29,671 - main - INFO - Startup sequence completed
+2026-01-05 16:56:36,723 - main - INFO - Shutting down application...
+2026-01-05 16:56:36,723 - main - INFO - Mission complete: {'mission_id': '20260105_112929', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_112929_20260105_112929', 'log_file': 'mission_logs\\mission_20260105_112929_20260105_112929\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_112929_20260105_112929\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_112929_20260105_112929\\images'}
+2026-01-05 16:56:36,733 - main - INFO - Thread pool executor shut down
+2026-01-05 17:09:34,457 - main - INFO - Brain initialized successfully
+2026-01-05 17:09:34,661 - main - INFO - Starting application lifespan...
+2026-01-05 17:09:34,673 - main - INFO - Thread pool executor initialized
+2026-01-05 17:09:34,715 - main - INFO - Loading YOLO models...
+2026-01-05 17:09:35,503 - main - INFO - YOLO models loaded successfully
+2026-01-05 17:09:35,507 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_120935_20260105_120935
+2026-01-05 17:09:35,508 - main - INFO - Startup sequence completed
+2026-01-05 17:13:09,515 - main - INFO - Shutting down application...
+2026-01-05 17:13:09,515 - main - INFO - Mission complete: {'mission_id': '20260105_120935', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_120935_20260105_120935', 'log_file': 'mission_logs\\mission_20260105_120935_20260105_120935\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_120935_20260105_120935\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_120935_20260105_120935\\images'}
+2026-01-05 17:13:09,522 - main - INFO - Thread pool executor shut down
+2026-01-05 17:18:22,197 - main - INFO - Brain initialized successfully
+2026-01-05 17:18:22,264 - main - INFO - Starting application lifespan...
+2026-01-05 17:18:22,265 - main - INFO - Thread pool executor initialized
+2026-01-05 17:18:22,265 - main - INFO - Loading YOLO models...
+2026-01-05 17:18:22,897 - main - INFO - YOLO models loaded successfully
+2026-01-05 17:18:22,901 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_121822_20260105_121822
+2026-01-05 17:18:22,905 - main - INFO - Startup sequence completed
+2026-01-05 17:19:06,848 - main - INFO - Shutting down application...
+2026-01-05 17:19:06,849 - main - INFO - Mission complete: {'mission_id': '20260105_121822', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_121822_20260105_121822', 'log_file': 'mission_logs\\mission_20260105_121822_20260105_121822\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_121822_20260105_121822\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_121822_20260105_121822\\images'}
+2026-01-05 17:19:06,850 - main - INFO - Thread pool executor shut down
+2026-01-05 17:19:20,147 - main - INFO - Brain initialized successfully
+2026-01-05 17:19:20,205 - main - INFO - Starting application lifespan...
+2026-01-05 17:19:20,205 - main - INFO - Thread pool executor initialized
+2026-01-05 17:19:20,206 - main - INFO - Loading YOLO models...
+2026-01-05 17:19:20,472 - main - INFO - YOLO models loaded successfully
+2026-01-05 17:19:20,474 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_121920_20260105_121920
+2026-01-05 17:19:20,475 - main - INFO - Startup sequence completed
+2026-01-05 17:27:06,522 - main - INFO - Shutting down application...
+2026-01-05 17:27:06,522 - main - INFO - Mission complete: {'mission_id': '20260105_121920', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_121920_20260105_121920', 'log_file': 'mission_logs\\mission_20260105_121920_20260105_121920\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_121920_20260105_121920\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_121920_20260105_121920\\images'}
+2026-01-05 17:27:06,530 - main - INFO - Thread pool executor shut down
+2026-01-05 17:27:30,384 - main - INFO - Brain initialized successfully
+2026-01-05 17:27:53,974 - main - INFO - Brain initialized successfully
+2026-01-05 17:28:33,758 - main - INFO - Brain initialized successfully
+2026-01-05 17:28:33,813 - main - INFO - Starting application lifespan...
+2026-01-05 17:28:33,814 - main - INFO - Thread pool executor initialized
+2026-01-05 17:28:33,814 - main - INFO - Loading YOLO models...
+2026-01-05 17:28:34,266 - main - INFO - YOLO models loaded successfully
+2026-01-05 17:28:34,268 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_122834_20260105_122834
+2026-01-05 17:28:34,268 - main - INFO - Startup sequence completed
+2026-01-05 17:35:57,387 - main - INFO - Shutting down application...
+2026-01-05 17:35:57,387 - main - INFO - Mission complete: {'mission_id': '20260105_122834', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_122834_20260105_122834', 'log_file': 'mission_logs\\mission_20260105_122834_20260105_122834\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_122834_20260105_122834\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_122834_20260105_122834\\images'}
+2026-01-05 17:35:57,395 - main - INFO - Thread pool executor shut down
+2026-01-05 17:36:24,153 - main - INFO - Brain initialized successfully
+2026-01-05 17:36:24,313 - main - INFO - Starting application lifespan...
+2026-01-05 17:36:24,314 - main - INFO - Thread pool executor initialized
+2026-01-05 17:36:24,314 - main - INFO - Loading YOLO models...
+2026-01-05 17:36:24,792 - main - INFO - YOLO models loaded successfully
+2026-01-05 17:36:24,794 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_123624_20260105_123624
+2026-01-05 17:36:24,795 - main - INFO - Startup sequence completed
+2026-01-05 17:37:06,774 - main - INFO - Shutting down application...
+2026-01-05 17:37:06,775 - main - INFO - Mission complete: {'mission_id': '20260105_123624', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_123624_20260105_123624', 'log_file': 'mission_logs\\mission_20260105_123624_20260105_123624\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_123624_20260105_123624\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_123624_20260105_123624\\images'}
+2026-01-05 17:37:06,777 - main - INFO - Thread pool executor shut down
+2026-01-05 17:56:35,543 - main - INFO - Brain initialized successfully
+2026-01-05 17:56:35,705 - main - INFO - Starting application lifespan...
+2026-01-05 17:56:35,707 - main - INFO - Thread pool executor initialized
+2026-01-05 17:56:35,707 - main - INFO - Loading YOLO models...
+2026-01-05 17:56:36,877 - main - INFO - YOLO models loaded successfully
+2026-01-05 17:56:36,891 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_125636_20260105_125636
+2026-01-05 17:56:36,891 - main - INFO - Startup sequence completed
+2026-01-05 17:58:37,302 - main - INFO - Shutting down application...
+2026-01-05 17:58:37,302 - main - INFO - Mission complete: {'mission_id': '20260105_125636', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_125636_20260105_125636', 'log_file': 'mission_logs\\mission_20260105_125636_20260105_125636\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_125636_20260105_125636\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_125636_20260105_125636\\images'}
+2026-01-05 17:58:37,322 - main - INFO - Thread pool executor shut down
+2026-01-05 17:59:31,137 - main - INFO - Brain initialized successfully
+2026-01-05 17:59:31,317 - main - INFO - Starting application lifespan...
+2026-01-05 17:59:31,317 - main - INFO - Thread pool executor initialized
+2026-01-05 17:59:31,317 - main - INFO - Loading YOLO models...
+2026-01-05 17:59:31,826 - main - INFO - YOLO models loaded successfully
+2026-01-05 17:59:31,829 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_125931_20260105_125931
+2026-01-05 17:59:31,829 - main - INFO - Startup sequence completed
+2026-01-05 18:03:44,696 - main - INFO - Shutting down application...
+2026-01-05 18:03:44,696 - main - INFO - Mission complete: {'mission_id': '20260105_125931', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_125931_20260105_125931', 'log_file': 'mission_logs\\mission_20260105_125931_20260105_125931\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_125931_20260105_125931\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_125931_20260105_125931\\images'}
+2026-01-05 18:03:44,704 - main - INFO - Thread pool executor shut down
+2026-01-05 19:15:01,436 - main - INFO - Brain initialized successfully
+2026-01-05 19:15:01,664 - main - INFO - Starting application lifespan...
+2026-01-05 19:15:01,665 - main - INFO - Thread pool executor initialized
+2026-01-05 19:15:01,666 - main - INFO - Loading YOLO models...
+2026-01-05 19:15:02,551 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:15:02,557 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_141502_20260105_141502
+2026-01-05 19:15:02,561 - main - INFO - Startup sequence completed
+2026-01-05 19:17:38,312 - main - INFO - SLAM coordinates: x=10.5, y=-3.2
+2026-01-05 19:17:40,681 - main - INFO - YOLO detections: ['person', '0'], failures: []
+2026-01-05 19:17:46,884 - main - ERROR - Gemini API error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-01-05 19:17:46,891 - main - CRITICAL - FAILURE LOGGED: gemini_api_error - {'error': '404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.'}
+2026-01-05 19:17:53,859 - main - ERROR - Gemini API error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-01-05 19:17:53,861 - main - CRITICAL - FAILURE LOGGED: gemini_api_error - {'error': '404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.'}
+2026-01-05 19:18:00,082 - main - ERROR - Gemini API error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-01-05 19:18:00,093 - main - CRITICAL - FAILURE LOGGED: gemini_api_error - {'error': '404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.'}
+2026-01-05 19:18:00,097 - main - ERROR - Gemini analysis failed: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-01-05 19:18:00,099 - main - CRITICAL - FAILURE LOGGED: gemini_analysis_error - {'timestamp': '2026-01-05T14:17:38.312879+00:00', 'error': '404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.'}
+2026-01-05 19:18:00,189 - main - INFO - Annotated image saved: mission_logs\mission_20260105_141502_20260105_141502\images\20260105_141502_000001_20260105_141800.jpg
+2026-01-05 19:18:00,197 - main - INFO - Frame processed: 20260105_141502_000001 | 21876.94ms | SLAM: {'x': 10.5, 'y': -3.2}
+2026-01-05 19:26:00,068 - main - INFO - Shutting down application...
+2026-01-05 19:26:00,068 - main - INFO - Mission complete: {'mission_id': '20260105_141502', 'total_entries': 1, 'mission_dir': 'mission_logs\\mission_20260105_141502_20260105_141502', 'log_file': 'mission_logs\\mission_20260105_141502_20260105_141502\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_141502_20260105_141502\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_141502_20260105_141502\\images'}
+2026-01-05 19:26:00,087 - main - INFO - Thread pool executor shut down
+2026-01-05 19:26:26,676 - main - INFO - Brain initialized successfully
+2026-01-05 19:26:26,850 - main - INFO - Starting application lifespan...
+2026-01-05 19:26:26,850 - main - INFO - Thread pool executor initialized
+2026-01-05 19:26:26,851 - main - INFO - Loading YOLO models...
+2026-01-05 19:26:28,697 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:26:28,701 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_142628_20260105_142628
+2026-01-05 19:26:28,702 - main - INFO - Startup sequence completed
+2026-01-05 19:26:30,203 - main - INFO - Shutting down application...
+2026-01-05 19:26:30,204 - main - INFO - Mission complete: {'mission_id': '20260105_142628', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_142628_20260105_142628', 'log_file': 'mission_logs\\mission_20260105_142628_20260105_142628\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_142628_20260105_142628\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_142628_20260105_142628\\images'}
+2026-01-05 19:26:30,205 - main - INFO - Thread pool executor shut down
+2026-01-05 19:26:41,062 - main - INFO - Brain initialized successfully
+2026-01-05 19:26:41,127 - main - INFO - Starting application lifespan...
+2026-01-05 19:26:41,128 - main - INFO - Thread pool executor initialized
+2026-01-05 19:26:41,128 - main - INFO - Loading YOLO models...
+2026-01-05 19:26:41,395 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:26:41,397 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_142641_20260105_142641
+2026-01-05 19:26:41,398 - main - INFO - Startup sequence completed
+2026-01-05 19:27:20,055 - main - INFO - Shutting down application...
+2026-01-05 19:27:20,056 - main - INFO - Mission complete: {'mission_id': '20260105_142641', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_142641_20260105_142641', 'log_file': 'mission_logs\\mission_20260105_142641_20260105_142641\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_142641_20260105_142641\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_142641_20260105_142641\\images'}
+2026-01-05 19:27:20,061 - main - INFO - Thread pool executor shut down
+2026-01-05 19:27:47,324 - main - INFO - Brain initialized successfully
+2026-01-05 19:27:47,389 - main - INFO - Starting application lifespan...
+2026-01-05 19:27:47,389 - main - INFO - Thread pool executor initialized
+2026-01-05 19:27:47,390 - main - INFO - Loading YOLO models...
+2026-01-05 19:27:47,631 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:27:47,640 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_142747_20260105_142747
+2026-01-05 19:27:47,640 - main - INFO - Startup sequence completed
+2026-01-05 19:28:01,730 - main - INFO - Brain initialized successfully
+2026-01-05 19:28:01,812 - main - INFO - Starting application lifespan...
+2026-01-05 19:28:01,813 - main - INFO - Thread pool executor initialized
+2026-01-05 19:28:01,814 - main - INFO - Loading YOLO models...
+2026-01-05 19:28:02,100 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:28:02,103 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_142802_20260105_142802
+2026-01-05 19:28:02,103 - main - INFO - Startup sequence completed
+2026-01-05 19:28:17,602 - main - INFO - Brain initialized successfully
+2026-01-05 19:28:17,673 - main - INFO - Starting application lifespan...
+2026-01-05 19:28:17,673 - main - INFO - Thread pool executor initialized
+2026-01-05 19:28:17,674 - main - INFO - Loading YOLO models...
+2026-01-05 19:28:17,939 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:28:17,941 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_142817_20260105_142817
+2026-01-05 19:28:17,942 - main - INFO - Startup sequence completed
+2026-01-05 19:28:55,070 - main - INFO - Brain initialized successfully
+2026-01-05 19:28:55,174 - main - INFO - Starting application lifespan...
+2026-01-05 19:28:55,175 - main - INFO - Thread pool executor initialized
+2026-01-05 19:28:55,175 - main - INFO - Loading YOLO models...
+2026-01-05 19:28:56,128 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:28:56,137 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_142856_20260105_142856
+2026-01-05 19:28:56,146 - main - INFO - Startup sequence completed
+2026-01-05 19:34:28,309 - main - INFO - Shutting down application...
+2026-01-05 19:34:28,310 - main - INFO - Mission complete: {'mission_id': '20260105_142856', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_142856_20260105_142856', 'log_file': 'mission_logs\\mission_20260105_142856_20260105_142856\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_142856_20260105_142856\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_142856_20260105_142856\\images'}
+2026-01-05 19:34:28,311 - main - INFO - Thread pool executor shut down
+2026-01-05 19:34:39,078 - main - INFO - Brain initialized successfully
+2026-01-05 19:34:39,142 - main - INFO - Starting application lifespan...
+2026-01-05 19:34:39,142 - main - INFO - Thread pool executor initialized
+2026-01-05 19:34:39,143 - main - INFO - Loading YOLO models...
+2026-01-05 19:34:39,383 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:34:39,386 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_143439_20260105_143439
+2026-01-05 19:34:39,386 - main - INFO - Startup sequence completed
+2026-01-05 19:34:56,155 - main - INFO - Brain initialized successfully
+2026-01-05 19:34:56,238 - main - INFO - Starting application lifespan...
+2026-01-05 19:34:56,239 - main - INFO - Thread pool executor initialized
+2026-01-05 19:34:56,239 - main - INFO - Loading YOLO models...
+2026-01-05 19:34:56,564 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:34:56,566 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_143456_20260105_143456
+2026-01-05 19:34:56,568 - main - INFO - Startup sequence completed
+2026-01-05 19:35:23,522 - main - INFO - SLAM coordinates: x=10.5, y=-3.2
+2026-01-05 19:35:25,460 - main - INFO - YOLO detections: ['person', '0'], failures: []
+2026-01-05 19:35:41,944 - main - ERROR - Gemini API error: 404 models/gemini-pro-vision is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-01-05 19:35:41,950 - main - CRITICAL - FAILURE LOGGED: gemini_api_error - {'error': '404 models/gemini-pro-vision is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.'}
+2026-01-05 19:35:49,218 - main - ERROR - Gemini API error: 404 models/gemini-pro-vision is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-01-05 19:35:49,219 - main - CRITICAL - FAILURE LOGGED: gemini_api_error - {'error': '404 models/gemini-pro-vision is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.'}
+2026-01-05 19:35:56,247 - main - ERROR - Gemini API error: 404 models/gemini-pro-vision is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-01-05 19:35:56,255 - main - CRITICAL - FAILURE LOGGED: gemini_api_error - {'error': '404 models/gemini-pro-vision is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.'}
+2026-01-05 19:35:56,256 - main - ERROR - Gemini analysis failed: 404 models/gemini-pro-vision is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-01-05 19:35:56,257 - main - CRITICAL - FAILURE LOGGED: gemini_analysis_error - {'timestamp': '2026-01-05T14:35:23.522468+00:00', 'error': '404 models/gemini-pro-vision is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.'}
+2026-01-05 19:35:56,301 - main - INFO - Annotated image saved: mission_logs\mission_20260105_143456_20260105_143456\images\20260105_143456_000001_20260105_143556.jpg
+2026-01-05 19:35:56,309 - main - INFO - Frame processed: 20260105_143456_000001 | 32779.27ms | SLAM: {'x': 10.5, 'y': -3.2}
+2026-01-05 19:40:19,611 - main - INFO - Shutting down application...
+2026-01-05 19:40:19,612 - main - INFO - Mission complete: {'mission_id': '20260105_143456', 'total_entries': 1, 'mission_dir': 'mission_logs\\mission_20260105_143456_20260105_143456', 'log_file': 'mission_logs\\mission_20260105_143456_20260105_143456\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_143456_20260105_143456\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_143456_20260105_143456\\images'}
+2026-01-05 19:40:19,621 - main - INFO - Thread pool executor shut down
+2026-01-05 19:40:32,225 - main - INFO - Brain initialized successfully
+2026-01-05 19:40:32,291 - main - INFO - Starting application lifespan...
+2026-01-05 19:40:32,291 - main - INFO - Thread pool executor initialized
+2026-01-05 19:40:32,291 - main - INFO - Loading YOLO models...
+2026-01-05 19:40:32,558 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:40:32,560 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_144032_20260105_144032
+2026-01-05 19:40:32,561 - main - INFO - Startup sequence completed
+2026-01-05 19:41:01,971 - main - INFO - SLAM coordinates: x=10.5, y=-3.2
+2026-01-05 19:41:04,680 - main - INFO - YOLO detections: ['person', '0'], failures: []
+2026-01-05 19:41:12,378 - main - ERROR - Gemini API error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 48.554246209s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2026-01-05 19:41:12,391 - main - CRITICAL - FAILURE LOGGED: gemini_api_error - {'error': '429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 48.554246209s. [links {\n  description: "Learn more about Gemini API quotas"\n  url: "https://ai.google.dev/gemini-api/docs/rate-limits"\n}\n, violations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"\n  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\nviolations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"\n  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\nviolations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"\n  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\n, retry_delay {\n  seconds: 48\n}\n]'}
+2026-01-05 19:41:12,396 - main - WARNING - Rate limit hit, backing off...
+2026-01-05 19:41:19,471 - main - ERROR - Gemini API error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 41.448252452s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 41
+}
+]
+2026-01-05 19:41:19,483 - main - CRITICAL - FAILURE LOGGED: gemini_api_error - {'error': '429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 41.448252452s. [links {\n  description: "Learn more about Gemini API quotas"\n  url: "https://ai.google.dev/gemini-api/docs/rate-limits"\n}\n, violations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"\n  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\nviolations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"\n  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\nviolations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"\n  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\n, retry_delay {\n  seconds: 41\n}\n]'}
+2026-01-05 19:41:19,488 - main - WARNING - Rate limit hit, backing off...
+2026-01-05 19:41:26,232 - main - ERROR - Gemini API error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 34.692985087s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 34
+}
+]
+2026-01-05 19:41:26,253 - main - CRITICAL - FAILURE LOGGED: gemini_api_error - {'error': '429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 34.692985087s. [links {\n  description: "Learn more about Gemini API quotas"\n  url: "https://ai.google.dev/gemini-api/docs/rate-limits"\n}\n, violations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"\n  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\nviolations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"\n  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\nviolations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"\n  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\n, retry_delay {\n  seconds: 34\n}\n]'}
+2026-01-05 19:41:26,262 - main - WARNING - Rate limit hit, backing off...
+2026-01-05 19:41:26,262 - main - ERROR - Gemini analysis failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 34.692985087s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 34
+}
+]
+2026-01-05 19:41:26,275 - main - CRITICAL - FAILURE LOGGED: gemini_analysis_error - {'timestamp': '2026-01-05T14:41:01.971705+00:00', 'error': '429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 34.692985087s. [links {\n  description: "Learn more about Gemini API quotas"\n  url: "https://ai.google.dev/gemini-api/docs/rate-limits"\n}\n, violations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"\n  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\nviolations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"\n  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\nviolations {\n  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"\n  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"\n  quota_dimensions {\n    key: "model"\n    value: "gemini-2.0-flash"\n  }\n  quota_dimensions {\n    key: "location"\n    value: "global"\n  }\n}\n, retry_delay {\n  seconds: 34\n}\n]'}
+2026-01-05 19:41:26,310 - main - INFO - Annotated image saved: mission_logs\mission_20260105_144032_20260105_144032\images\20260105_144032_000001_20260105_144126.jpg
+2026-01-05 19:41:26,318 - main - INFO - Frame processed: 20260105_144032_000001 | 24339.65ms | SLAM: {'x': 10.5, 'y': -3.2}
+2026-01-05 19:54:05,761 - main - INFO - Shutting down application...
+2026-01-05 19:54:05,762 - main - INFO - Mission complete: {'mission_id': '20260105_144032', 'total_entries': 1, 'mission_dir': 'mission_logs\\mission_20260105_144032_20260105_144032', 'log_file': 'mission_logs\\mission_20260105_144032_20260105_144032\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_144032_20260105_144032\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_144032_20260105_144032\\images'}
+2026-01-05 19:54:05,783 - main - INFO - Thread pool executor shut down
+2026-01-05 19:54:32,030 - main - INFO - Brain initialized successfully
+2026-01-05 19:54:32,186 - main - INFO - Starting application lifespan...
+2026-01-05 19:54:32,187 - main - INFO - Thread pool executor initialized
+2026-01-05 19:54:32,187 - main - INFO - Loading YOLO models...
+2026-01-05 19:54:32,783 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:54:32,785 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_145432_20260105_145432
+2026-01-05 19:54:32,786 - main - INFO - Startup sequence completed
+2026-01-05 19:54:55,773 - main - INFO - Shutting down application...
+2026-01-05 19:54:55,774 - main - INFO - Mission complete: {'mission_id': '20260105_145432', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_145432_20260105_145432', 'log_file': 'mission_logs\\mission_20260105_145432_20260105_145432\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_145432_20260105_145432\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_145432_20260105_145432\\images'}
+2026-01-05 19:54:55,775 - main - INFO - Thread pool executor shut down
+2026-01-05 19:55:13,534 - main - INFO - Brain initialized successfully
+2026-01-05 19:55:13,607 - main - INFO - Starting application lifespan...
+2026-01-05 19:55:13,609 - main - INFO - Thread pool executor initialized
+2026-01-05 19:55:13,609 - main - INFO - Loading YOLO models...
+2026-01-05 19:55:14,081 - main - INFO - YOLO models loaded successfully
+2026-01-05 19:55:14,083 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_145514_20260105_145514
+2026-01-05 19:55:14,084 - main - INFO - Startup sequence completed
+2026-01-05 19:55:23,716 - main - INFO - SLAM coordinates: x=10.5, y=-3.2
+2026-01-05 19:55:25,639 - main - INFO - YOLO detections: ['0', 'person'], failures: []
+2026-01-05 19:55:33,320 - main - INFO - AI analysis complete: location=Kitchen counter area with stainless steel refrigerator and cabinets visible, hazard=False, severity=SAFE
+2026-01-05 19:55:33,356 - main - INFO - Annotated image saved: mission_logs\mission_20260105_145514_20260105_145514\images\20260105_145514_000001_20260105_145533.jpg
+2026-01-05 19:55:33,369 - main - INFO - Frame processed: 20260105_145514_000001 | 9640.84ms | SLAM: {'x': 10.5, 'y': -3.2}
+2026-01-05 20:14:34,802 - main - INFO - Shutting down application...
+2026-01-05 20:14:34,806 - main - INFO - Mission complete: {'mission_id': '20260105_145514', 'total_entries': 1, 'mission_dir': 'mission_logs\\mission_20260105_145514_20260105_145514', 'log_file': 'mission_logs\\mission_20260105_145514_20260105_145514\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_145514_20260105_145514\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_145514_20260105_145514\\images'}
+2026-01-05 20:14:34,827 - main - INFO - Thread pool executor shut down
+2026-01-05 20:30:32,432 - main - INFO - Brain initialized successfully
+2026-01-05 20:30:32,575 - main - INFO - Starting application lifespan...
+2026-01-05 20:30:32,576 - main - INFO - Thread pool executor initialized
+2026-01-05 20:30:32,576 - main - INFO - Loading YOLO models...
+2026-01-05 20:30:33,159 - main - INFO - YOLO models loaded successfully
+2026-01-05 20:30:33,161 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_153033_20260105_153033
+2026-01-05 20:30:33,162 - main - INFO - Startup sequence completed
+2026-01-05 20:44:46,231 - main - INFO - UGV state changed to: tele-op
+2026-01-05 20:44:47,463 - main - INFO - UGV state changed to: autonomous
+2026-01-05 20:44:48,698 - main - INFO - UGV state changed to: idling
+2026-01-05 20:45:07,335 - main - INFO - UGV state changed to: tele-op
+2026-01-05 20:45:08,862 - main - INFO - UGV state changed to: autonomous
+2026-01-05 20:45:19,258 - main - INFO - UGV state changed to: tele-op
+2026-01-05 20:45:24,123 - main - INFO - UGV state changed to: idling
+2026-01-05 20:49:57,351 - main - INFO - Shutting down application...
+2026-01-05 20:49:57,352 - main - INFO - Mission complete: {'mission_id': '20260105_153033', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_153033_20260105_153033', 'log_file': 'mission_logs\\mission_20260105_153033_20260105_153033\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_153033_20260105_153033\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_153033_20260105_153033\\images'}
+2026-01-05 20:49:57,366 - main - INFO - Thread pool executor shut down
+2026-01-05 21:07:50,730 - main - INFO - Brain initialized successfully
+2026-01-05 21:07:50,897 - main - INFO - Starting application lifespan...
+2026-01-05 21:07:50,898 - main - INFO - Thread pool executor initialized
+2026-01-05 21:07:50,898 - main - INFO - Loading YOLO models...
+2026-01-05 21:07:51,583 - main - INFO - YOLO models loaded successfully
+2026-01-05 21:07:51,586 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_160751_20260105_160751
+2026-01-05 21:07:51,587 - main - INFO - Startup sequence completed
+2026-01-05 21:14:50,676 - main - INFO - Shutting down application...
+2026-01-05 21:14:50,677 - main - INFO - Mission complete: {'mission_id': '20260105_160751', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_160751_20260105_160751', 'log_file': 'mission_logs\\mission_20260105_160751_20260105_160751\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_160751_20260105_160751\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_160751_20260105_160751\\images'}
+2026-01-05 21:14:50,682 - main - INFO - Thread pool executor shut down
+2026-01-05 21:17:09,027 - main - INFO - Brain initialized successfully
+2026-01-05 21:17:09,206 - main - INFO - Starting application lifespan...
+2026-01-05 21:17:09,208 - main - INFO - Thread pool executor initialized
+2026-01-05 21:17:09,208 - main - INFO - Loading YOLO models...
+2026-01-05 21:17:09,933 - main - INFO - YOLO models loaded successfully
+2026-01-05 21:17:09,936 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_161709_20260105_161709
+2026-01-05 21:17:09,937 - main - INFO - Startup sequence completed
+2026-01-05 21:20:03,589 - main - INFO - Shutting down application...
+2026-01-05 21:20:03,589 - main - INFO - Mission complete: {'mission_id': '20260105_161709', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_161709_20260105_161709', 'log_file': 'mission_logs\\mission_20260105_161709_20260105_161709\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_161709_20260105_161709\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_161709_20260105_161709\\images'}
+2026-01-05 21:20:03,596 - main - INFO - Thread pool executor shut down
+2026-01-05 21:56:06,798 - main - INFO - Brain initialized successfully
+2026-01-05 21:56:06,982 - main - INFO - Starting application lifespan...
+2026-01-05 21:56:06,984 - main - INFO - Thread pool executor initialized
+2026-01-05 21:56:06,984 - main - INFO - Loading YOLO models...
+2026-01-05 21:56:07,664 - main - INFO - YOLO models loaded successfully
+2026-01-05 21:56:07,677 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_165607_20260105_165607
+2026-01-05 21:56:07,678 - main - INFO - Startup sequence completed
+2026-01-05 21:56:37,044 - main - INFO - UGV state changed to: tele-op
+2026-01-05 21:56:38,418 - main - INFO - UGV state changed to: idling
+2026-01-05 22:50:56,804 - main - INFO - Shutting down application...
+2026-01-05 22:50:56,974 - main - INFO - Mission complete: {'mission_id': '20260105_165607', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_165607_20260105_165607', 'log_file': 'mission_logs\\mission_20260105_165607_20260105_165607\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_165607_20260105_165607\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_165607_20260105_165607\\images'}
+2026-01-05 22:50:57,210 - main - INFO - Thread pool executor shut down
+2026-01-05 22:54:10,478 - main - INFO - Brain initialized successfully
+2026-01-05 22:54:10,637 - main - INFO - Starting application lifespan...
+2026-01-05 22:54:10,637 - main - INFO - Thread pool executor initialized
+2026-01-05 22:54:10,637 - main - INFO - Loading YOLO models...
+2026-01-05 22:54:11,280 - main - INFO - YOLO models loaded successfully
+2026-01-05 22:54:11,282 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_175411_20260105_175411
+2026-01-05 22:54:11,284 - main - INFO - Startup sequence completed
+2026-01-05 22:59:39,258 - main - INFO - Shutting down application...
+2026-01-05 22:59:39,259 - main - INFO - Mission complete: {'mission_id': '20260105_175411', 'total_entries': 0, 'mission_dir': 'mission_logs\\mission_20260105_175411_20260105_175411', 'log_file': 'mission_logs\\mission_20260105_175411_20260105_175411\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_175411_20260105_175411\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_175411_20260105_175411\\images'}
+2026-01-05 22:59:39,261 - main - INFO - Thread pool executor shut down
+2026-01-05 23:13:50,602 - main - INFO - Brain initialized successfully
+2026-01-05 23:13:50,777 - main - INFO - Starting application lifespan...
+2026-01-05 23:13:50,777 - main - INFO - Thread pool executor initialized
+2026-01-05 23:13:50,778 - main - INFO - Loading YOLO models...
+2026-01-05 23:13:51,482 - main - INFO - YOLO models loaded successfully
+2026-01-05 23:13:51,484 - main - INFO - Mission logger initialized: mission_logs\mission_20260105_181351_20260105_181351
+2026-01-05 23:13:51,485 - main - INFO - Startup sequence completed
+2026-01-05 23:17:42,198 - main - INFO - UGV state changed to: tele-op
+2026-01-05 23:17:54,282 - main - INFO - UGV state changed to: autonomous
+2026-01-05 23:18:42,833 - main - INFO - SLAM coordinates: x=10.5, y=-3.2
+2026-01-05 23:18:46,278 - main - INFO - YOLO detections: ['0', 'person'], failures: []
+2026-01-05 23:18:58,029 - main - INFO - AI analysis complete: location=Kitchen counter area with a person examining documents, a fire extinguisher, and a smoke detector., hazard=False, severity=SAFE
+2026-01-05 23:18:58,113 - main - INFO - Annotated image saved: mission_logs\mission_20260105_181351_20260105_181351\images\20260105_181351_000001_20260105_181858.jpg
+2026-01-05 23:18:58,129 - main - INFO - Frame processed: 20260105_181351_000001 | 15281.67ms | SLAM: {'x': 10.5, 'y': -3.2}
+2026-01-05 23:33:19,689 - main - INFO - Shutting down application...
+2026-01-05 23:33:19,689 - main - INFO - Mission complete: {'mission_id': '20260105_181351', 'total_entries': 1, 'mission_dir': 'mission_logs\\mission_20260105_181351_20260105_181351', 'log_file': 'mission_logs\\mission_20260105_181351_20260105_181351\\mission_log.jsonl', 'csv_file': 'mission_logs\\mission_20260105_181351_20260105_181351\\mission_log.csv', 'images_dir': 'mission_logs\\mission_20260105_181351_20260105_181351\\images'}
+2026-01-05 23:33:19,714 - main - INFO - Thread pool executor shut down

@@ -1,0 +1,1 @@
+entry_id,timestamp,slam_x,slam_y,location,detections,hazard_detected,hazard_type,severity,action_plan,needs_annotation,annotation_text,reasoning,yolo_failures,image_path
